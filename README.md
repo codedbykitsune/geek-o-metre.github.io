@@ -8,7 +8,7 @@ The quiz includes questions about science, technology, books, fantasy worlds, ga
 
 Add the GitHub Pages link here after publishing the project:
 
-`https://your-username.github.io/geek-o-metre/`
+`[geek-o-metre](https://github.com/codedbykitsune/geek-o-metre/)`
 
 ## Features
 
