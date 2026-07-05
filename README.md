@@ -5,7 +5,7 @@ Geek-O-Metre is a simple web-based quiz application created with HTML, CSS and J
 The quiz includes questions about science, technology, books, fantasy worlds, games and popular culture.
 
 ## Live Demo
-[geek-o-metre]([https://github.com/codedbykitsune/geek-o-metre/](https://codedbykitsune.github.io/geek-o-metre.github.io/)
+[geek-o-metre](https://codedbykitsune.github.io/geek-o-metre.github.io/)
 
 ## Features
 
@@ -28,7 +28,7 @@ The quiz includes questions about science, technology, books, fantasy worlds, ga
 ## Technologies
 
 - HTML5
-- CSS3
+- CSS
 - JavaScript
 
 ## Project Structure
@@ -38,4 +38,5 @@ geek-o-metre/
 ├── index.html
 ├── style.css
 ├── script.js
+├── _config.yml
 └── README.md
