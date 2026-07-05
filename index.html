@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- This helps the page look good on phones too. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Geek-O-Metre, eğlenceli genel kültür ve geek kültürü mini quiz uygulamasi."
+  >
+
+  <title>Geek-O-Metre | Mini Quiz</title>
+
+  <!-- Do not forget to connect the CSS file. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page-wrapper">
+    <section class="quiz-card">
+
+      <!-- Quiz header -->
+      <header class="quiz-header">
+        <div>
+          <p class="eyebrow">MINI QUIZ</p>
+          <h1>Geek-O-Metre</h1>
+          <p class="quiz-description">
+            Bilim, teknoloji, fantastik dünyalar ve popüler kültür.
+            Bakalim beyninde ne kadar gereksiz ama etkileyici bilgi sakliyorsun.
+          </p>
+        </div>
+
+        <div class="score-box" aria-live="polite">
+          <span>Puan</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <!-- Start screen -->
+      <section id="start-screen" class="screen">
+        <div class="start-content">
+          <div class="start-icon" aria-hidden="true">🧠</div>
+
+          <h2>Teste hazir misin?</h2>
+
+          <p>
+            Quiz 10 sorudan oluşuyor. Her soru için 15 saniyen var.
+            Dogru cevaplar 10 puan kazandirir.
+          </p>
+
+          <ul class="rules-list">
+            <li>Her soruda yalnizca bir cevap secebilirsin.</li>
+            <li>Cevap vermeden sonraki soruya geçemezsin.</li>
+            <li>Sorular ve seçenekler her oyunda karişir.</li>
+          </ul>
+
+          <button id="start-button" class="primary-button" type="button">
+            Quiz'i Başlat
+          </button>
+        </div>
+      </section>
+
+      <!-- Quiz screen -->
+      <section id="quiz-screen" class="screen hidden">
+
+        <!-- Question number and timer -->
+        <div class="quiz-status">
+          <p id="question-counter">Soru 1 / 10</p>
+
+          <div
+            id="timer"
+            class="timer"
+            aria-live="polite"
+            aria-label="Kalan süre"
+          >
+            <span aria-hidden="true">⏱</span>
+            <strong id="time-left">15</strong>
+            <span>sn</span>
+          </div>
+        </div>
+
+        <!-- Progress bar -->
+        <div
+          class="progress-container"
+          role="progressbar"
+          aria-label="Quiz ilerlemesi"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <!-- Question -->
+        <div class="question-area">
+          <p id="question-category" class="question-category">
+            Kategori
+          </p>
+
+          <h2 id="question-text">
+            Soru burada görünecek.
+          </h2>
+        </div>
+
+        <!-- JavaScript adds the answer buttons here. -->
+        <div
+          id="answer-buttons"
+          class="answer-grid"
+          aria-label="Cevap seçenekleri"
+        ></div>
+
+        <!-- Feedback appears after an answer is selected. -->
+        <div
+          id="feedback-box"
+          class="feedback-box hidden"
+          aria-live="polite"
+        >
+          <h3 id="feedback-title"></h3>
+          <p id="feedback-explanation"></p>
+        </div>
+
+        <div class="quiz-actions">
+          <!-- Keep this button disabled until the user answers. -->
+          <button
+            id="next-button"
+            class="primary-button"
+            type="button"
+            disabled
+          >
+            Sonraki Soru
+          </button>
+        </div>
+      </section>
+
+      <!-- Result screen -->
+      <section id="result-screen" class="screen hidden">
+        <div class="result-content">
+          <div id="result-icon" class="result-icon" aria-hidden="true">
+            ✨
+          </div>
+
+          <p class="eyebrow">QUIZ TAMAMLANDI</p>
+
+          <h2 id="result-title">Sonucun Hazir</h2>
+
+          <p id="result-message" class="result-message"></p>
+
+          <div class="result-stats">
+            <div class="result-stat">
+              <span>Doğru Cevap</span>
+              <strong id="correct-answer-count">0 / 10</strong>
+            </div>
+
+            <div class="result-stat">
+              <span>Toplam Puan</span>
+              <strong id="final-score">0</strong>
+            </div>
+
+            <div class="result-stat">
+              <span>Başari</span>
+              <strong id="success-rate">%0</strong>
+            </div>
+          </div>
+
+          <button id="restart-button" class="primary-button" type="button">
+            Tekrar Başla
+          </button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Do not forget defer. It waits for the HTML before running JS. -->
+  <script src="script.js" defer></script>
+</body>
+</html>
